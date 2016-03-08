@@ -1,4 +1,4 @@
-package com.anx.visut;
+package com.anx.resut;
 
 public class GameData
 {

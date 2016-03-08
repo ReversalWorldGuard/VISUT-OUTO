@@ -1,4 +1,4 @@
-package com.anx.visut;
+package com.anx.resut;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -16,39 +16,25 @@ import android.widget.LinearLayout;
 public class BeginView extends LinearLayout implements Runnable
 {
 
-    
+    private View view;
+
+    private Button start;
 
     @Override
     public void run()
     {
         // TODO: Implement this method
         invalidate();
+        }
+    private void draw(){
+       
     }
-
-    
-    @Override
-    protected void onDraw(Canvas canvas)
-    {
-        // TODO: Implement this method
-        super.onDraw(canvas);
-        getHandler().postDelayed(this, 100);
-        
-    }
-
-    
-    
-
-    private View view;
-
-    private Button start;
-    
-    private Handler h=new Handler();;
 
        
     public BeginView(Context c){
         super(c);
         this.view=LayoutInflater.from(c).inflate(R.layout.begin,null);
-        
+        draw();
         setGravity(Gravity.CENTER|Gravity.TOP);
         view.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.FILL_PARENT));
         addView(view);
